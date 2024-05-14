@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Titulo</th>
+        <th scope="col">Descripcion</th>
+        <th scope="col">Estado</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for t in tareas %}
+      <tr>
+        <th scope="row">{{ t.titulo }}</th>
+        <td>{{ t.descripcion }}</td>
+        <td>{{ t.Activa }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
